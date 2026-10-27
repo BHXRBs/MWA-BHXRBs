@@ -1,0 +1,3 @@
+MYBASE="/scratch/mwasci/sprabu/MWA-BHXRBs"
+MYCLUSTER="setonix"
+MYACCOUNT="mwasci"

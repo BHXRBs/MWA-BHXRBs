@@ -1,0 +1,6 @@
+alias wsclean='singularity exec /scratch/mwasci/sprabu/MWA-BHXRBs/containers/wsclean_v3.5.sif wsclean'
+alias calibrate='singularity exec /scratch/mwasci/sprabu/MWA-BHXRBs/containers/mwa-reduce_amd64.sif calibrate'
+alias aoflagger='singularity exec /scratch/mwasci/sprabu/MWA-BHXRBs/containers/aoflagger_3.0_portable.sif aoflagger'
+alias plotsolutions='singularity exec /scratch/mwasci/sprabu/MWA-BHXRBs/containers/hyperdrive_main.sif hyperdrive solutions-plot'
+alias applysolutions='singularity exec /scratch/mwasci/sprabu/MWA-BHXRBs/containers/mwa-reduce_amd64.sif applysolutions'
+alias flagantennae='singularity exec /scratch/mwasci/sprabu/MWA-BHXRBs/containers/mwa-reduce_amd64.sif flagantennae'
