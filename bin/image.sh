@@ -47,7 +47,7 @@ cd ${base}/processing/
 for obsnum in "${obsnums[@]}"; do
 
     cd ${obsnum}
-    #applysolutions ${obsnum}.ms ../${calobs}/${calobs}.bin
+    applysolutions ${obsnum}.ms ../${calobs}/${calobs}.bin
     cd ../
 done
 
@@ -59,9 +59,9 @@ for obsnum in "${obsnums[@]}"; do
     msfiles+=("../processing/${obsnum}/${obsnum}.ms")
 done
 
-wsclean -name ${imgname}-brigs0 -size 2000 2000 -scale 0.5amin -niter 100000 -mgain 0.4 -weight briggs 0 -auto-threshold 1.5 -gridder wgridder -pol i -minuv-l 20 -mwa-path ${base}/containers/ -apply-primary-beam ${msfiles[@]}
+wsclean -name ${imgname}-brigs0 -size 2000 2000 -scale 0.5amin -niter 10000000 -mgain 0.4 -weight briggs 0 -auto-threshold 1.5 -gridder wgridder -pol i -minuv-l 20 -mwa-path ${base}/containers/ -apply-primary-beam ${msfiles[@]}
 
-wsclean -name ${imgname}-natural -size 2000 2000 -scale 0.5amin -niter 100000 -mgain 0.4 -weight natural -auto-threshold 1.5 -gridder wgridder -pol i -minuv-l 20 -mwa-path ${base}/containers/ -apply-primary-beam ${msfiles[@]}
+wsclean -name ${imgname}-natural -size 2000 2000 -scale 0.5amin -niter 10000000 -mgain 0.4 -weight natural -auto-threshold 1.5 -gridder wgridder -pol i -minuv-l 20 -mwa-path ${base}/containers/ -apply-primary-beam ${msfiles[@]}
 
 
 end=`date +%s`
